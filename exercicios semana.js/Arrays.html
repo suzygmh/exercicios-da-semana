@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> 
+    Tarefa
+</title> 
+</head> 
+<body> 
+<script>
+    
+   function funcaoRemoveCaracterDoTexto(caracter, arrayL){
+        let arrayAtualizado = arrayL.filter(function(value, index, arr){ 
+            return value != caracter;
+        });
+        
+        return arrayAtualizado;
+   }
+
+   function OrdenarElementos(array){
+        for(var i = 0; i < array.length;i++){
+            for(var j = 0; j < array.length - 1; j++){
+                if(array[i] < array[j]){
+                    var aux = array[i];
+                    array[i] = array[j];
+                    array[j] = aux; 
+                }
+
+            }
+        }
+   }   
+
+   function funcaoConcatenaArrays(array1, array2){
+        let unidoArray = [].concat(array1, array2);
+
+        return unidoArray;
+   }
+
+    var listaVazia = [];
+
+    function InsereListaVazia(item){
+        listaVazia.push(item);
+    }
+
+    function RemoveUltimoElementoListaVazia(item){
+        listaVazia.pop(item);
+    }
+
+
+</script>
+</body> 
+</html> 

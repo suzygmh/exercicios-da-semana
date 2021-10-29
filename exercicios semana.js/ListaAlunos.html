@@ -1,0 +1,27 @@
+<html>
+<head>
+<title> 
+    Tarefa
+</title> 
+</head> 
+<body> 
+<script>
+    
+    /*  Crie uma função que recebe um aluno e adiciona esse aluno à uma lista de alunos (nome, idade)
+     {nome: "aaa", idade: 55} 
+    crie uma função que recebe um nome e retorne o aluno que tiver aquele nome (Find) */
+    let lista_alunos = [];
+
+    function AdicionaAluno(aluno){
+        lista_alunos.push(aluno);
+    }
+    
+    let aluno = { nome: 'Suzana', idade: '29' };
+
+    AdicionaAluno(aluno);      
+
+    console.log(lista_alunos.map(aluno => aluno.nome));
+    console.log(lista_alunos.map(aluno => aluno.idade));
+</script>
+</body> 
+</html> 

@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> 
+    Tarefa
+</title> 
+</head> 
+<body> 
+<script>
+    
+/*
+    +============================================================+
+    |                    CADASTRO DE PRODUTOS                    |
+    +============================================================+
+*/
+    var listaDeProdutos = [];
+
+    var produto1 = {
+        id: 1,
+        descricao: 'Produto 1',
+        valor: 100
+    };
+
+    var produto2 = {
+        id: 2,
+        descricao: 'Produto 2',
+        valor: 200
+    };
+
+    CadastrarProduto(produto1);
+    CadastrarProduto(produto2);
+    
+    function CadastrarProduto(produto){  
+        let produtoIdExistente = listaDeProdutos.filter(function(value, index, arr){ 
+            return value.id == produto.id;
+        });
+        
+        if (produtoIdExistente.length == 0)
+            listaDeProdutos.push(produto);
+    }
+
+    function ExcluirProduto(id){
+        let listaProdutosAtualizada = listaDeProdutos.filter(function(value, index, arr){ 
+            return value.id != id;
+        });
+
+        listaDeProdutos = listaProdutosAtualizada;
+    }
+
+    function BuscaProduto(id){
+        let produto = listaDeProdutos.find(function(produto) {
+            return produto.id == id;
+        });
+        
+        return produto;
+    }
+
+    listaDeProdutos.map(function(produto, i) {
+        console.log('[forEach]', produto, i);
+    });
+
+</script>
+</body> 
+</html> 

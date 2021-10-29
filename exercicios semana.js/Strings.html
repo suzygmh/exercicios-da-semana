@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> 
+    Tarefa
+</title> 
+</head> 
+<body> 
+<script>
+    
+    /*
+       1) Crie uma função que recebe como parâmetro uma lista com os valores [1, 'Olá', undefined, 99999, 'Texto qualquer']
+          e essa função imprima no console o valor de cada elemento da lista;
+    */
+
+    function RecebePorParametro(array){
+        array.forEach(element => {
+            console.log(element);
+        });       
+    }
+
+    RecebePorParametro([1, 'Olá', undefined, 99999, 'Texto qualquer']);
+
+    function RemoveEspacoInicioFim(texto){
+        console.log(texto.toUpperCase().trim())
+    }
+
+    RemoveEspacoInicioFim('    Teste se função deixa letras em maiúscula e remove espaços   ');
+
+    function exibeMensagensNaOrdem(num1, num2, callback) {
+        
+        if (isNaN(num1) || isNaN(num2)){
+            callback();
+        }
+        else{
+            var soma = num1 + num2;
+            console.log(soma);
+        }
+    }
+
+    function ExibeMensagem(){
+        console.log('Algum número digitado foi inválido')
+    }
+
+    exibeMensagensNaOrdem(1, 'A', ExibeMensagem);
+
+    exibeMensagensNaOrdem(2, 2, ExibeMensagem);
+    
+</script>
+</body> 
+</html> 
